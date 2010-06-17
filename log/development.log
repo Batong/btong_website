@@ -4753,3 +4753,464 @@ Migrating to CreateComments (20100609084327)
   [4;36;1mSQL (23.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
   [4;35;1mSQL (1.2ms)[0m   [0mdescribe `posts`[0m
   [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `posts`[0m
+  [4;36;1mSQL (60.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (36.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-13 19:27:40) [GET]
+Rendering home/index
+Completed in 48ms (View: 46, DB: 96) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-13 19:27:45) [GET]
+  [4;36;1mPost Load (128.1ms)[0m   [0;1mSELECT * FROM `posts` [0m
+Rendering template within layouts/posts
+Rendering posts/index
+  [4;35;1mPost Columns (134.7ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Completed in 427ms (View: 132, DB: 263) | 200 OK [http://0.0.0.0/posts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-06-13 19:27:55) [GET]
+  [4;36;1mPost Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered posts/_form (7.4ms)
+Completed in 25ms (View: 18, DB: 2) | 200 OK [http://0.0.0.0/posts/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-13 19:28:14) [GET]
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM `posts` [0m
+Rendering template within layouts/posts
+Rendering posts/index
+  [4;36;1mPost Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Completed in 21ms (View: 14, DB: 2) | 200 OK [http://0.0.0.0/posts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-06-13 19:32:53) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  app/controllers/comments_controller.rb:49:in `find_post'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (106.9ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-13 19:35:23) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-06-13 19:35:29) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  app/controllers/comments_controller.rb:50:in `find_post'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (34.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-06-13 19:37:23) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  app/controllers/comments_controller.rb:50:in `find_post'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (35.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-06-13 19:37:27) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  app/controllers/comments_controller.rb:50:in `find_post'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-13 19:38:28) [GET]
+Rendering home/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-06-13 19:38:32) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  app/controllers/comments_controller.rb:50:in `find_post'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (36.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-06-13 19:38:48) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  app/controllers/comments_controller.rb:3:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-06-13 19:38:49) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  app/controllers/comments_controller.rb:3:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-06-13 19:39:25) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  app/controllers/comments_controller.rb:50:in `find_post'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (114.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-13 19:39:34) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-06-13 19:39:39) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  app/controllers/comments_controller.rb:50:in `find_post'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (35.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-13 19:41:39) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-13 19:41:41) [GET]
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM `posts` [0m
+Rendering template within layouts/posts
+Rendering posts/index
+  [4;36;1mPost Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Completed in 21ms (View: 14, DB: 3) | 200 OK [http://0.0.0.0/posts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-06-13 19:41:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (21.8ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;35;1mComment Load (27.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.post_id = 1) [0m
+Completed in 87ms (View: 30, DB: 51) | 200 OK [http://0.0.0.0/posts/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-06-13 19:41:50) [GET]
+  Parameters: {"post_id"=>"1"}
+  [4;36;1mPost Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (1.2ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+Rendering comments/index
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.post_id = 1) [0m
+Completed in 19ms (View: 8, DB: 3) | 200 OK [http://0.0.0.0/posts/1/comments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2010-06-13 19:45:22) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  app/controllers/comments_controller.rb:50:in `find_post'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (34.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#manage (for 127.0.0.1 at 2010-06-13 19:45:27) [GET]
+
+ActionController::UnknownAction (No action responded to manage. Actions: create, destroy, edit, index, new, show, and update):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2010-06-13 19:45:36) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  app/controllers/comments_controller.rb:50:in `find_post'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2010-06-13 19:45:42) [GET]
+  Parameters: {"id"=>"1"}
+
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  app/controllers/comments_controller.rb:50:in `find_post'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (34.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-13 19:46:12) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-06-13 19:46:14) [GET]
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM `posts` [0m
+Rendering template within layouts/posts
+Rendering posts/index
+  [4;36;1mPost Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Completed in 95ms (View: 12, DB: 2) | 200 OK [http://localhost/posts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-06-13 19:46:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.post_id = 1) [0m
+Completed in 15ms (View: 6, DB: 2) | 200 OK [http://localhost/posts/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2010-06-13 19:46:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Rendered posts/_form (8.0ms)
+Completed in 21ms (View: 14, DB: 2) | 200 OK [http://localhost/posts/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-06-13 19:46:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Columns (104.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.post_id = 1) [0m
+Completed in 117ms (View: 6, DB: 105) | 200 OK [http://localhost/posts/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-06-13 19:46:29) [GET]
+  Parameters: {"post_id"=>"1"}
+  [4;35;1mPost Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+Rendering comments/index
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.post_id = 1) [0m
+Completed in 12ms (View: 3, DB: 2) | 200 OK [http://localhost/posts/1/comments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2010-06-13 19:46:34) [GET]
+  Parameters: {"post_id"=>"1", "id"=>"show"}
+  [4;36;1mPost Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+  [4;36;1mComment Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 0 AND (`comments`.post_id = 1)) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Comment with ID=show AND (`comments`.post_id = 1)):
+  app/controllers/comments_controller.rb:10:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2010-06-13 19:46:38) [GET]
+  Parameters: {"post_id"=>"1", "id"=>"edit"}
+  [4;36;1mPost Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+  [4;36;1mComment Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 0 AND (`comments`.post_id = 1)) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Comment with ID=edit AND (`comments`.post_id = 1)):
+  app/controllers/comments_controller.rb:10:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (34.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2010-06-13 19:46:43) [GET]
+  Parameters: {"post_id"=>"1", "id"=>"create"}
+  [4;36;1mPost Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+  [4;36;1mComment Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 0 AND (`comments`.post_id = 1)) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Comment with ID=create AND (`comments`.post_id = 1)):
+  app/controllers/comments_controller.rb:10:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (111.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2010-06-13 19:46:49) [GET]
+  Parameters: {"post_id"=>"1"}
+  [4;36;1mPost Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+  [4;36;1mComment Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 24ms (View: 11, DB: 4) | 200 OK [http://localhost/posts/1/comments/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2010-06-13 19:47:05) [GET]
+  Parameters: {"post_id"=>"1", "id"=>"index"}
+  [4;35;1mPost Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+  [4;35;1mComment Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 0 AND (`comments`.post_id = 1)) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Comment with ID=index AND (`comments`.post_id = 1)):
+  app/controllers/comments_controller.rb:10:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2010-06-13 19:47:09) [GET]
+  Parameters: {"post_id"=>"1"}
+  [4;35;1mPost Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+  [4;35;1mComment Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 18ms (View: 6, DB: 3) | 200 OK [http://localhost/posts/1/comments/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (39.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20100530190557)
+Migrating to CreateComments (20100609084327)
+Migrating to CreateTags (20100613180254)
+  [4;36;1mSQL (165.6ms)[0m   [0;1mCREATE TABLE `tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `post_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (17.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100613180254')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `comments`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `comments`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `posts`[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mSHOW KEYS FROM `posts`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `tags`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `tags`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `tags`[0m
