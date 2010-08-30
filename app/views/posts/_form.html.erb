@@ -1,10 +1,3 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<title>Untitled Document</title>
-	</head>
-	<body>
 	<% @post.tags.build if @post.tags.empty? %>
 <% form_for(@post) do |post_form| %>
   <%= post_form.error_messages %>
@@ -39,5 +32,3 @@
     <%= post_form.submit "Save" %>
   </p>
 <% end %>
-	</body>
-</html>
