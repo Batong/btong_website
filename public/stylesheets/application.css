@@ -1,0 +1,142 @@
+html, body {color: #black; height: 100%; background-color:#FFFFFF; margin:0px auto; padding:0px auto;	 }
+
+body, p, ol, ul, td{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+  
+}
+
+pre {
+  background-color: #eee;
+  font-size: 11px;
+}
+
+a { color: #000;}
+a:visited { color: #666; }
+a:hover { color:#00FFEE; background-color:#000; }
+
+.fieldWithErrors {	
+  background-color: red;
+  display: table;
+}
+.wrapper{
+   margin: 0px auto;
+   width: 1024px;
+   display:table;
+   height:100%;
+   background-color:#FFFFFF;
+   bottom:0px;	
+   position:relative;	
+   border-right-style:solid;
+   border-right-width:1px;
+   border-color:#ec8a00;
+   border-left-style: solid;
+   border-left-width:1px;
+   	
+}
+.logo
+{
+   position: absolute;
+   padding-left:50px;
+   top: 0px;	
+   background:#FFFFFF url('/images/Do_you_sharks.png') no-repeat left top;
+   margin:0px auto;
+   height:100%;
+   width:600px;
+   float:left;
+   }
+
+.menu{
+   position: relative;
+   padding-left:50px;	
+   top: 150px;
+   left:0px;
+   background-color:#FFFFFF;
+   margin:0px auto;
+   width:974px;	
+   height:19px;
+   float:left;
+   border-top-style:solid;
+   border-top-width:1px;
+   border-top-color:#ec8a00;
+
+   }
+.content{
+   position:relative;
+   margin: 0px auto;
+   padding-left:10px;
+   background-color:#FFFFFF;
+   top:150px;
+   float:left;
+   height:100%;
+}
+
+#css-menu a {
+float:left;
+text-decoration:none;
+color:#FF0000;
+font-size:1.4em;
+}
+
+#css-menu a:hover
+{
+	color:black;
+	background-color:#FFFFFF;
+}
+#css-menu ul
+{
+float:left;
+width:100%;
+text-decoration:none;
+list-style:none; 
+}
+#css-menu li
+{
+float:left;
+margin-right:1em;	
+text-decoration:none;
+list-style:none; 
+}
+#css-menu 
+{
+	display:inline;
+}
+
+#css-menu-active a
+{
+float:left;
+text-decoration:none;
+color:blue;  
+list-style:none; 
+}
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+

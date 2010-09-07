@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Posts: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'application' %>
+  </head>
+ <body>
+  <div class="wrapper">
+     <div class="menu">
+      <ul id="css-menu">
+       <% unless current_page? :controller => "home" %>
+       <li id="css-menu"><%= link_to "Home", { :controller => 'home'},  :class => 'css-menu'  %></li>
+       <% else %>
+       <li id="css-menu-active"><%= link_to "Home", { :controller => 'home'},  :class => 'css-menu-active'  %></li>
+	   <%end%>
+	   <% unless current_page? :controller => "posts" %>
+      <li id="css-menu"><%= link_to "Posts", { :controller => 'posts'},  :class => 'css-menu'  %></li>
+      <% else %>
+      <li id="css-menu-active"><%= link_to "Posts", { :controller => 'posts'},  :class => 'css-menu'  %></li>
+	   <%end%>
+	  <% unless current_page? :controller => 'posts', :action=>'new' %>
+      <li id="css-menu"><%= link_to "New post", { :controller => 'posts', :action=> 'new'},  :class => 'css-menu'  %></li>
+      <% else %>
+      <li id="css-menu-active"><%= link_to "New post", { :controller => 'posts', :action=> 'new'},  :class => 'css-menu'  %></li>
+	   <%end%>
+   <li id="css-menu"><a href="#" id="css-menu">About me</a></li>
+   </ul>	
+     </div>
+     <div class="content"><%= notice %>
+     <%= yield %>
+     </div>
+    </div>
+ </body>
+</html>
