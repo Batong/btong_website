@@ -4,7 +4,26 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
+  #include ActionView::Helpers::UrlHelper
 
-  # Scrub sensitive parameters from your log
-  # filter_parameter_logging :password
+
+=begin
+HOME = 'home'
+POSTS = 'posts'
+NEW = 'new'
+  
+    def currentMenuLink
+      unless current_page? :controller => 'google'
+       link_to 'Home',{ :controller => 'Home'},  :class => 'css-menu'
+      else 
+       link_to 'Home', { :controller => 'Home'},  :class => 'css-menu-active'
+      end
+    end
+=end
 end
+
+
+    
+
+   #Scrub sensitive parameters from your log
+  # filter_parameter_logging :password
