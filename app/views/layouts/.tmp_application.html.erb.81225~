@@ -20,8 +20,7 @@
      <div class="content"><%= notice %>
      <%= yield %>
 	 </div>
-	 <div class="footer">dsdsd</div>
     </div>
-
+   <div class="side">dsdsd</div>
  </body>
 </html>

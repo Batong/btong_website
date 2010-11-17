@@ -13,15 +13,13 @@
      <div class="menu">
    <ul id= "css-menu">
       <li id="css-menu"><%= link_to "Home", { :controller => 'home'}, :id => "#{current_page?(:controller => 'home') ? "css-menu-active" : "css-menu-link"}" %></li>
-	  <li id = "css-menu"><%= link_to "Posts", { :controller => 'posts'}, :id => "#{current_page?(:controller => 'posts') ? "css-menu-active" : "css-menu-link"}" %></li>
- 	  <li id "css-menu"><%= link_to "New posts", { :controller => 'posts', :action => 'new' }, :id => "#{current_page?(:controller => 'posts', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
+	  <li><%= link_to "Posts", { :controller => 'posts'}, :id => "#{current_page?(:controller => 'posts') ? "css-menu-active" : "css-menu-link"}" %></li>
+ 	  <li><%= link_to "New posts", { :controller => 'posts', :action => 'new' }, :id => "#{current_page?(:controller => 'posts', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
    </ul>	
      </div>
      <div class="content"><%= notice %>
      <%= yield %>
-	 </div>
-	 <div class="footer">dsdsd</div>
+     </div>
     </div>
-
  </body>
 </html>

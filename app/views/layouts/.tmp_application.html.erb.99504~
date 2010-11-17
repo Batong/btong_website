@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Posts: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'application' %>
+ </head> 
+<body><div id="container"> 
+	
+	<div id="content"> 
+		<div id="top"> 
+			<img src="http://www.mac-terminal.com/img/layout/imac.png" alt="Mac-terminal.com" /> 
+			<h1><a href="http://www.mac-terminal.com/se/" title="MacTerminal"><strong>Mac-Terminal</strong>.com</a></h1> 
+			<h2>En introduktion till Terminalen på Mac</h2> 
+ 
+			<ul id="languages"> 
+							<li><a href="http://www.mac-terminal.com/"><img src="http://www.mac-terminal.com/img/layout/icons/lang_en.png" /></a></li> 
+							<li class="selected"><a href="http://www.mac-terminal.com/se/"><img src="http://www.mac-terminal.com/img/layout/icons/lang_se.png" /></a></li> 
+						</ul> 
+ 
+		</div> 
+		<div id="menu"> 
+	<ul> 
+	<li class="selected"><span><a href="http://www.mac-terminal.com/se/">Hem</a></span></li><li><span><a href="http://www.mac-terminal.com/se/filer-och-mappar/">Filer och mappar</a></span></li><li><span><a href="http://www.mac-terminal.com/se/internet-och-natverk/">Internet och Nätverk</a></span></li><li><span><a href="http://www.mac-terminal.com/se/system/">System</a></span></li><li><span><a href="http://www.mac-terminal.com/se/shortcuts/">Snabbkommandon</a></span></li><li><span><a href="http://www.mac-terminal.com/se/ovrigt/">Övrigt</a></span></li> 
+	</ul> 
+</div> 
+<div id="grid"> 
+	<div class="grid_main"> 
+	<%= notice %>
+     <%= yield %>
+		
+ 
+			<p class="cb">&nbsp;</p>		
+			
+		</div> 
+		<div class="grid_right"></div>
+	</div>	
+<div class="cb">&nbsp;</div> 
+</div> 
+</div>
+ 
+</body> 
+</html>
