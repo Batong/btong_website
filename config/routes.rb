@@ -1,7 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :posts, :has_many => :comments
-
-    map.root :controller => 'home'
+  map.connect '/posts/destroy/:id/', :controller => 'posts', :action => 
+  'destroy', :id => /\d+/
+  map.root :controller => 'home'
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

@@ -1,0 +1,100 @@
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-11 16:07:24 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-11 16:19:29 +0000
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 62ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-11 16:19:35 +0000
+  Processing by PostsController#index as HTML
+  [1m[36mSQL (19.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT `posts`.* FROM `posts`
+Mysql::Error: Table 'btong_website_test.posts' doesn't exist: SELECT     `posts`.* FROM       `posts`
+Completed   in 163ms
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2010-12-11 16:19:45 +0000
+  Processing by PostsController#new as HTML
+Completed   in 43ms
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-11 16:19:50 +0000
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (8.4ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Mysql::Error: Table 'btong_website_test.posts' doesn't exist: SELECT     `posts`.* FROM       `posts`
+Completed   in 9ms
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (146.3ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (416.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreatePosts (20100530190557)
+  [1m[35mSQL (182.3ms)[0m  CREATE TABLE `posts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `title` varchar(255), `content` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (2.2ms)[0m  [1mdescribe `schema_migrations`[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100530190557')
+Migrating to CreateComments (20100609084327)
+  [1m[36mSQL (201.4ms)[0m  [1mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `commenter` varchar(255), `body` text, `post_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100609084327')
+Migrating to CreateTags (20100613180254)
+  [1m[36mSQL (182.2ms)[0m  [1mCREATE TABLE `tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `post_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100613180254')
+Migrating to CreateGoos (20101211132834)
+  [1m[36mSQL (174.6ms)[0m  [1mCREATE TABLE `goos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `body` text, `published` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20101211132834')
+  [1m[36mSQL (19.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (3.5ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.0ms)[0m  describe `comments`
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW KEYS FROM `comments`[0m
+  [1m[35mSQL (1.8ms)[0m  describe `goos`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `goos`[0m
+  [1m[35mSQL (1.2ms)[0m  describe `posts`
+  [1m[36mSQL (1.7ms)[0m  [1mSHOW KEYS FROM `posts`[0m
+  [1m[35mSQL (1.3ms)[0m  describe `tags`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `tags`[0m
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-11 16:22:54 +0000
+  Processing by PostsController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts`
+Rendered posts/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 152ms (Views: 59.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2010-12-11 16:22:56 +0000
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2010-12-11 16:22:57 +0000
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (164.7ms)
+Rendered posts/new.html.erb within layouts/application (186.1ms)
+Completed 200 OK in 240ms (Views: 209.5ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
