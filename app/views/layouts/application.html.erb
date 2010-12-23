@@ -17,10 +17,18 @@
     myBorder.render('wrapper');</script> -->
 	 </div>
      <div id="menu">  
-   	 <ul class = "css-menu">
+	   <div id="standard_link">
+   	   <ul class = "css-menu">
          <li class ="css-menu"><%= link_to "Home", { :controller => 'home'}, :class => "#{current_page?(:controller => 'home') ? "css-menu-active" : "css-menu-link"}" %></li>
 	     <li class ="css-menu"><%= link_to "Posts", posts_path, :class => "#{current_page?(:controller => 'posts') ? "css-menu-active" : "css-menu-link"}" %></li>
  	     <li class ="css-menu"><%= link_to "New posts", new_post_path,  :class => "#{current_page?(:controller => 'posts', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
+       </ul>
+       </div>
+     <div id="user_link">
+	 <ul class = "css-menu">
+         <li class ="css-menu"><%= link_to "Log in", new_user_path,  :class => "#{current_page?(:controller => 'users', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
+         <li class ="css-menu"><%= link_to "Sign up", new_user_path,  :class => "#{current_page?(:controller => 'users', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
+	 </div>
      </ul>
      </div>
      <div id="content"><%= notice %>

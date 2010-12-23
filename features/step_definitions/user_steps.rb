@@ -1,14 +1,14 @@
 When /^I sign up with my username, mail and password$/ do 
-  @@safari.text_field(:id,"user_user").set USER
-  @@safari.text_field(:id,"user_mail").set MAIL
+  @@safari.text_field(:id, "user_user").set USER
+  @@safari.text_field(:id, "user_mail").set MAIL
   @@safari.password(:id,"user_password").set PASSWORD
   @@safari.password(:id, "user_password_confirmation").set PASSWORD
   @@safari.button(:name, "commit").click
 end
 
 When /^I sign up with fault username, mail and password$/ do 
-  @@safari.text_field(:id,"user_user").set USER_FAULT
-  @@safari.text_field(:id,"user_mail").set MAIL_FAULT
+  @@safari.text_field(:id, "user_user").set USER_FAULT
+  @@safari.text_field(:id, "user_mail").set MAIL_FAULT
   @@safari.password(:id,"user_password").set PASSWORD_FAULT
   @@safari.password(:id, "user_password_confirmation").set PASSWORD
   @@safari.button(:name, "commit").click

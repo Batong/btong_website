@@ -80,8 +80,26 @@ html, body { background-color: #FFFFFF; color:#000000; margin:20px 0px 0px 0px; 
    border-top-style:solid;
    border-top-width:1px;
    border-top-color:#ec8a00;
+   position:relative;
    }
 
+#standard_link{
+   padding:0px 0px 0px 0px;	
+   left:0px;
+   height:30px;
+   margin:0px auto;
+   width:400px;
+   position:absolute;
+   }
+
+#user_link{
+   padding:0px 0px 0px 0px;	
+   height:30px;
+   left:750px;
+   margin:0px auto;
+   width:250px;	
+   position:absolute;
+   }
 #content{
    margin: 0px auto;
    padding:0px 0px 20px 0px;

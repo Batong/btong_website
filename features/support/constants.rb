@@ -1,5 +1,5 @@
 #PATHS
-LOCALHOST = 'http://localhost:3001/' # Testenvironment URL in browser
+LOCALHOST = 'http://localhost:3001' # Testenvironment URL in browser
 USER_PATH = '/users/new' 
 
 #AUTHENTICATION
