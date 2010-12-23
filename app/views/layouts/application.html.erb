@@ -1,31 +1,31 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" 
-"http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 
 <html>
  <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8">
   <title><%= controller.action_name %></title>
   <%= stylesheet_link_tag 'application' %>
+ <%= javascript_include_tag :defaults %> 
+ <%= csrf_meta_tag %> 
+ <%= yield (:head) %>
   </head>
  <body>
- <% if request.env['HTTP_USER_AGENT'].downcase.match('msie') %>
- <%= javascript_include_tag "shadedborder" %> 
- <% end %>
   <div id="wrapper">
   	 <div id="logo">   
-	 <script language="javascript" type="text/javascript"> 
+<!--	 <script language="javascript" type="text/javascript"> 
     var myBorder = RUZEE.ShadedBorder.create({ corner:8, shadow:16 });
-    myBorder.render('wrapper');</script>
+    myBorder.render('wrapper');</script> -->
 	 </div>
      <div id="menu">  
    	 <ul class = "css-menu">
          <li class ="css-menu"><%= link_to "Home", { :controller => 'home'}, :class => "#{current_page?(:controller => 'home') ? "css-menu-active" : "css-menu-link"}" %></li>
-	     <li class ="css-menu"><%= link_to "Posts", { :controller => 'posts'}, :class => "#{current_page?(:controller => 'posts') ? "css-menu-active" : "css-menu-link"}" %></li>
- 	     <li class ="css-menu"><%= link_to "New posts", { :controller => 'posts', :action => 'new' }, :class => "#{current_page?(:controller => 'posts', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
+	     <li class ="css-menu"><%= link_to "Posts", posts_path, :class => "#{current_page?(:controller => 'posts') ? "css-menu-active" : "css-menu-link"}" %></li>
+ 	     <li class ="css-menu"><%= link_to "New posts", new_post_path,  :class => "#{current_page?(:controller => 'posts', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
      </ul>
      </div>
      <div id="content"><%= notice %>
      <%= yield %>
+<%= debug params %>
 	 </div>
     </div>
  </body>

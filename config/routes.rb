@@ -1,8 +1,23 @@
-ActionController::Routing::Routes.draw do |map|
-  map.resources :posts, :has_many => :comments
-  map.connect '/posts/destroy/:id/', :controller => 'posts', :action => 
-  'destroy', :id => /\d+/
-  map.root :controller => 'home'
+BtongWebsite::Application.routes.draw do  
+  
+  get "users/index"
+
+  #map.resources :posts, :has_many => :comments
+  #map.connect '/posts/destroy/:id/', :controller => 'posts', :action => 
+ # 'destroy', :id => /\d+/
+
+resources :posts do
+   resources :comments
+end 
+
+match '/posts/delete/:id', :to => 'posts#destroy'
+
+
+resources :users
+
+   
+#match "/posts" => "posts#index"
+#match 'posts', :to => 'posts#index', :as => :posts
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
@@ -42,6 +57,5 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  root :to => 'home#index'
 end

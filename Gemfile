@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0.rc2'
+gem 'rails', '3.0.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -27,14 +27,16 @@ gem 'mysql'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
-  gem 'webrat', ">=0.5.3"
+
+  gem "autotest"
   gem "rspec", ">=1.2.9" , :require => false
   gem "rspec-rails", ">=1.2.9", :require => false 
   gem "webrat", ">=0.5.3", :require => false  
   gem "cucumber", ">=0.4.3",:require => false   
   gem "pickle", ">=0.1.21", :require => false 
   gem "cucumber-rails"
-  gem "firewatir"
   gem "selenium-webdriver"
+  gem "safariwatir"
   gem 'capybara'
+# gem 'ChromeWatir'
 end

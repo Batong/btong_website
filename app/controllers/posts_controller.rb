@@ -36,6 +36,19 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
   end
+  
+  # DELETE /posts/1
+  # DELETE /posts/1.xml
+  
+  def destroy 
+      @post = Post.find(params[:id])
+      @post.destroy
+
+      respond_to do |format|
+        format.html { redirect_to(posts_url) }
+        format.xml  { head :ok }
+      end
+    end
 
   # POST /posts
   # POST /posts.xml
@@ -73,14 +86,4 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
   end
 
-  # DELETE /posts/1
-  # DELETE /posts/1.xml
-  def destroy
-    @post = post.find(params[:id])
-    @post.destroy
-    respond_to do |format|
-      format.html { redirect_to(posts_url) }
-      format.xml  { head :ok }
-    end
-  end
 end

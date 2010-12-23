@@ -16,6 +16,16 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @post.comments.build(params[:comment])
+    
+    respond_to do |format|
+     if @comment.save
+        format.html { redirect_to(post_comments_path(@post), :notice => 'Post was successfully created.') }
+        format.xml  { render :xml => post_comments_path(@post), :status => :created, :location => home_index_url }
+     else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
+     end
+    end
   end
 
   def edit

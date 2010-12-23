@@ -1,5 +1,5 @@
 	<% @post.tags.build if @post.tags.empty? %>
-<% form_for(@post) do |post_form| %>
+<%= form_for(@post) do |post_form| %>
   <%= post_form.error_messages %>
 <div class="fieldcell">
   <p>
@@ -15,7 +15,7 @@
     <%= post_form.text_area :content %>
   </p>
   <h2>Tags</h2>
-  <% post_form.fields_for :tags do |tag_form| %>
+  <%= post_form.fields_for :tags do |tag_form| %>
     <p>
       <%= tag_form.label :name, 'Tag:' %>
       <%= tag_form.text_field :name %>

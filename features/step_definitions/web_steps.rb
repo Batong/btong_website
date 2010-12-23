@@ -17,7 +17,8 @@ end
 World(WithinHelpers)
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
-  visit path_to(page_name)
+  @@safari.goto path_to(page_name)
+  checking (page_name)
 end
 
 When /^(?:|I )go to (.+)$/ do |page_name|
@@ -30,11 +31,10 @@ When /^(?:|I )press "([^"]*)"(?: within "([^"]*)")?$/ do |button, selector|
   end
 end
 
-When /^(?:|I )follow "([^"]*)"(?: within "([^"]*)")?$/ do |link, selector|
-  with_scope(selector) do
-    click_link(link)
+When /^(?:|I )follow "([^"]*)" link (?: within "([^"]*)")?$/ do |link, selector|
+  @@safari.link(link_to(link)).click 
+   checking (link)
   end
-end
 
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"(?: within "([^"]*)")?$/ do |field, value, selector|
   with_scope(selector) do
