@@ -1,18 +1,18 @@
-When /^I sign up with my username, mail and password$/ do 
-  @@safari.text_field(:id, "user_user").set USER
-  @@safari.text_field(:id, "user_mail").set MAIL
-  @@safari.password(:id,"user_password").set PASSWORD
-  @@safari.password(:id, "user_password_confirmation").set PASSWORD
-  @@safari.button(:name, "commit").click
+When /^I (?:.+) with username, mail and password$/ do  #SIGN UP/LOGIN FORM - SUCCESSFUL
+ form = UserForms.new
+ form.userForm(USER, MAIL, PASSWORD, PASSWORD)
 end
 
-When /^I sign up with fault username, mail and password$/ do 
-  @@safari.text_field(:id, "user_user").set USER_FAULT
-  @@safari.text_field(:id, "user_mail").set MAIL_FAULT
-  @@safari.password(:id,"user_password").set PASSWORD_FAULT
-  @@safari.password(:id, "user_password_confirmation").set PASSWORD
-  @@safari.button(:name, "commit").click
+When /^I (?:.+) with fault username, mail and password$/ do #SIGN UP/LOGIN FORM - NOT SUCCESSFUL
+ form = UserForms.new
+ form.userForm(USER_FAULT, MAIL_FAULT, PASSWORD, PASSWORD_FAULT )
 end
+
+When /^I sign up with fault username$/ do
+  form = UserForms.new
+  form.userForm(USER, MAIL, PASSWORD, PASSWORD_FAULT)
+end
+  
 
 Then /^I should see a "([^\"]*)"$/ do |subject|
   if ((@@safari.text.include? subject) == true) 
@@ -34,7 +34,6 @@ Then /^I should get a warning message$/ do
    fail "No warning message displayed"
   end
   sleep 5
-  @@safari.close
 end
 
 

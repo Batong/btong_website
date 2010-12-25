@@ -26,7 +26,7 @@
        </div>
      <div id="user_link">
 	 <ul class = "css-menu">
-         <li class ="css-menu"><%= link_to "Log in", new_user_path,  :class => "#{current_page?(:controller => 'users', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
+         <li class ="css-menu"><%= link_to "Log in", new_session_path,  :class => "#{current_page?(:controller => 'sessions', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
          <li class ="css-menu"><%= link_to "Sign up", new_user_path,  :class => "#{current_page?(:controller => 'users', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
 	 </div>
      </ul>

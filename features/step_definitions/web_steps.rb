@@ -32,7 +32,7 @@ When /^(?:|I )press "([^"]*)"(?: within "([^"]*)")?$/ do |button, selector|
 end
 
 When /^(?:|I )follow "([^\"]*)" link$/ do |link|
-  @@safari.link(:href, link_to(link)).click 
+  @@safari.link(:text, link).click 
    checking (link)
   end
 

@@ -54445,3 +54445,9 @@ Started GET "/users/1" for 127.0.0.1 at 2010-12-23 21:47:19 +0000
   [1m[36mUser Load (40.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
 Rendered users/show.html.erb within layouts/application (27.9ms)
 Completed 200 OK in 105ms (Views: 34.3ms | ActiveRecord: 126.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-24 21:21:37 +0000
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)

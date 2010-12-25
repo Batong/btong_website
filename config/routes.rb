@@ -14,6 +14,7 @@ match '/posts/delete/:id', :to => 'posts#destroy'
 
 
 resources :users
+resources :sessions
 
    
 #match "/posts" => "posts#index"
