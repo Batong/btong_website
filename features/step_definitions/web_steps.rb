@@ -4,7 +4,6 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 
-
 require 'uri'
 require 'cgi'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
@@ -17,7 +16,7 @@ end
 World(WithinHelpers)
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
-  @@safari.goto path_to(page_name)
+  @@browser.goto path_to(page_name)
   checking (page_name)
 end
 
@@ -32,9 +31,9 @@ When /^(?:|I )press "([^"]*)"(?: within "([^"]*)")?$/ do |button, selector|
 end
 
 When /^(?:|I )follow "([^\"]*)" link$/ do |link|
-  @@safari.link(:text, link).click 
+   @@browser.link(:name, link).click 
    checking (link)
-  end
+end
 
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"(?: within "([^"]*)")?$/ do |field, value, selector|
   with_scope(selector) do

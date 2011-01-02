@@ -1,6 +1,4 @@
 BtongWebsite::Application.routes.draw do  
-  
-  get "users/index"
 
   #map.resources :posts, :has_many => :comments
   #map.connect '/posts/destroy/:id/', :controller => 'posts', :action => 
@@ -14,7 +12,9 @@ match '/posts/delete/:id', :to => 'posts#destroy'
 
 
 resources :users
-resources :sessions
+get    'login(.:format)'  => 'user_session#new',     :as => :login
+post   'login(.:format)'  => 'user_session#create',  :as => :login
+delete 'logout(.:format)' => 'user_session#destroy', :as => :logout
 
    
 #match "/posts" => "posts#index"

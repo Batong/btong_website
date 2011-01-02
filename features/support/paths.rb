@@ -6,9 +6,11 @@ module NavigationHelpers
   # step definition in web_steps.rb
   #
   def checking (url)
-    @safari_browser =  Watir::Safari.new
+    @browser =  Watir::Safari.new
+    #@browser = Watir::Browser.new(:chrome)
+    #@browser = FireWatir::Firefox.new
     check = url.to_s
-    unless ((@safari_browser.text.include? 'Not Found') == false)
+    unless ((@browser.text.include? 'Not Found') == false)
        fail check + " is not found"
     end 
   end
@@ -46,6 +48,9 @@ module NavigationHelpers
        LOCALHOST
     when /sign up screen/ then
        LOCALHOST + USER_PATH
+   when  /the user page/ then
+       LOCALHOST + USER_LOGIN
+         
 
         # Add more mappings here.
         # Here is an example that pulls values out of the Regexp:

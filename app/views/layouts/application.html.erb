@@ -26,8 +26,14 @@
        </div>
      <div id="user_link">
 	 <ul class = "css-menu">
-         <li class ="css-menu"><%= link_to "Log in", new_session_path,  :class => "#{current_page?(:controller => 'sessions', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
-         <li class ="css-menu"><%= link_to "Sign up", new_user_path,  :class => "#{current_page?(:controller => 'users', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
+		<% if current_user %>
+		<li class ="css-menu">
+           <%= link_to "Log out", logout_path, :method => :delete , :name => 'Log out' , :class => "#{current_page?(:controller => 'user_session', :action => 'destroy') ? "css-menu-active" : "css-menu-link"}" %></li>
+        <% else %>
+        <li class ="css-menu">
+	       <%= link_to "Log in", login_path, :name => 'Log in', :class => "#{current_page?(:controller => 'user_session', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
+         <%end%>	
+        <li class ="css-menu"><%= link_to "Sign up", new_user_path, :name => 'Sign up', :class => "#{current_page?(:controller => 'users', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
 	 </div>
      </ul>
      </div>

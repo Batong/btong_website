@@ -14,6 +14,7 @@ require 'cucumber/web/tableish'
 #require 'firewatir'
 require 'safariwatir'
 #require 'watir-webdriver'
+#require 'watir-webdriver/extensions/wait'
 
 require 'capybara/rails'
 require 'capybara/cucumber'
@@ -25,9 +26,9 @@ require 'cucumber/rails/capybara_javascript_emulation' # Lets you click links wi
 # steps to use the XPath syntax.
 Capybara.default_selector = :css
 
-@@safari = Watir::Safari.new
-##@@chrome = Watir::Browser.new(:chrome)
-##@@firefox = FireWatir::Firefox.new
+@@browser = Watir::Safari.new
+##@@browser = Watir::Browser.new(:chrome)
+##@@browser = FireWatir::Firefox.new
 
 # If you set this to false, any error raised from within your app will bubble 
 # up to your step definition and out to cucumber unless you catch it somewhere

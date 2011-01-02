@@ -1,13 +1,14 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
+gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql'
+gem 'passenger'
 
-# gem "safariwatir"
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -38,5 +39,6 @@ group :development, :test do
   gem "selenium-webdriver"
   gem "safariwatir"
   gem 'capybara'
-# gem 'ChromeWatir'
+# gem 'watir-webdriver'
+# gem 'firewatir' 
 end
