@@ -1,0 +1,184 @@
+/*Adding support for  Firefox, Safari/Chrome, Opera and IE9 */
+
+html, body { background-color: #FFFFFF; color:#000000; margin:20px 0px 0px 0px; padding:0px; } 
+ 
+  ol, ul {
+  font-family: verdana, arial, helvetica, sans-serif, serif;
+  font-size:   13px;
+  line-height: 18px;
+  margin:0px auto; 
+  padding-left:10px;
+  }
+  
+  h1, h2, h3  {margin: 0px auto;}
+  
+/*.fieldcell {    
+ background-color: #F2F7FB;    
+ color: #000000;      
+ width:950px;   
+ padding: 0px;    
+}   */
+
+  pre {
+  background-color: #eee;
+  font-size: 11px;}
+
+  a { color: #000;}
+  a:visited { color: #666; }
+  a:hover { font-size:1.3em;  } 
+
+
+#wrapper {
+   min-height: 100%;
+   height:100%;
+   height:auto !important;
+   margin: 0px auto;
+   padding:0px auto;
+   width: 1022px;
+   position:relative;
+   background-color:#FFFFFF;
+  -moz-border-radius-topleft: 15px;
+  -moz-border-radius-topright: 15px;
+  -webkit-border-top-left-radius: 15px;
+  -webkit-border-rop-right-radius: 15px;
+   border-top-left-radius: 15px;
+   border-top-right-radius: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  -moz-border-radius-bottomleft:15px;
+  -moz-border-radius-bottomright:15px;
+   border-bottom-left-radius:15px;
+   border-bottom-right-radius:15px;
+   border-style:solid;
+   border-width:1px;
+   border-color:#ec8a00;
+   -moz-box-shadow: 3px 3px 10px #CCCCCC;
+   -webkit-box-shadow: 5px 0px 5px #CCC, -5px 0px 5px #ccc;
+   box-shadow: 3px 3px 10px #CCCCCC;
+	/* For IE 8 */
+   -ms-filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+   /* For IE 5.5 - 7 */
+   filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
+#logo
+{
+   background:#FFFFFF url('/images/Do_you_sharks.png') no-repeat left top;
+   margin:10px 0px 0px 0px;
+   height:150px;
+   width:1002px;
+	
+   }
+
+#menu{
+   padding:5px 0px 0px 0px;	
+   left:0px;
+   height:30px;
+   background-color:#FFFFFF;
+   margin:0px auto;
+   width:1022px;	
+   border-top-style:solid;
+   border-top-width:1px;
+   border-top-color:#ec8a00;
+   position:relative;
+   }
+
+#standard_link{
+   padding:0px 0px 0px 0px;	
+   left:0px;
+   height:30px;
+   margin:0px auto;
+   width:400px;
+   position:absolute;
+   }
+
+#user_link{
+   padding:0px 0px 0px 0px;	
+   height:30px;
+   left:750px;
+   margin:0px auto;
+   width:250px;	
+   position:absolute;
+   }
+#content{
+   margin: 0px auto;
+   padding:0px 0px 20px 0px;
+   background-color:#FFFFFF;
+   min-height:400px;
+   height:auto !important;
+   width:1002px;
+}
+
+
+a.css-menu-link
+{
+	text-decoration:none;
+	color:#FF0000;
+	font-family: serif;
+}
+
+a.css-menu-link:hover
+  { font-size:1.5em;  } 
+
+a.css-menu-active
+{
+text-decoration:none;
+color:blue;  
+list-style:none; 
+font-family: serif;
+}
+
+a.css-menu-active:hover
+  { font-size:1.5em;  } 
+
+ul.css-menu 
+{
+width:100%;
+text-decoration:none;
+list-style:none; 
+padding-left:10px;
+
+}
+li.css-menu
+{
+margin-right:1.0em;	
+text-decoration:none;
+list-style:none; 
+font-size:1.5em;
+}
+.css-menu 
+{
+	display:inline;
+}
+
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+

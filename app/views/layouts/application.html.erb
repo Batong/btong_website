@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+ <head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+  <title><%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'application' %>
+ <%= javascript_include_tag :defaults %> 
+ <%= csrf_meta_tag %> 
+ <%= yield (:head) %>
+  </head>
+ <body>
+  <div id="wrapper">
+  	 <div id="logo">   
+<!--	 <script language="javascript" type="text/javascript"> 
+    var myBorder = RUZEE.ShadedBorder.create({ corner:8, shadow:16 });
+    myBorder.render('wrapper');</script> -->
+	 </div>
+     <div id="menu">  
+	   <div id="standard_link">
+   	   <ul class = "css-menu">
+         <li class ="css-menu"><%= link_to "Home", { :controller => 'home'}, :class => "#{current_page?(:controller => 'home') ? "css-menu-active" : "css-menu-link"}" %></li>
+	     <li class ="css-menu"><%= link_to "Posts", posts_path, :class => "#{current_page?(:controller => 'posts') ? "css-menu-active" : "css-menu-link"}" %></li>
+ 	     <li class ="css-menu"><%= link_to "New posts", new_post_path,  :class => "#{current_page?(:controller => 'posts', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
+       </ul>
+       </div>
+     <div id="user_link">
+	 <ul class = "css-menu">
+		<% if current_user %>
+		<li class ="css-menu">
+           <%= link_to "Log out", logout_path, :method => :delete , :name => 'Log out' , :class => "#{current_page?(:controller => 'user_session', :action => 'destroy') ? "css-menu-active" : "css-menu-link"}" %></li>
+        <% else %>
+        <li class ="css-menu">
+	       <%= link_to "Log in", login_path, :name => 'Log in', :class => "#{current_page?(:controller => 'user_session', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
+         <%end%>	
+        <li class ="css-menu"><%= link_to "Sign up", new_user_path, :name => 'Sign up', :class => "#{current_page?(:controller => 'users', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
+	 </div>
+     </ul>
+     </div>
+     <div id="content"><%= notice %>
+     <%= yield %>
+<%= debug params %>
+	 </div>
+    </div>
+ </body>
+</html>

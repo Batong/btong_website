@@ -1,0 +1,504 @@
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-01 21:43:10 +0000
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (380.1ms)
+Completed 200 OK in 448ms (Views: 447.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-01-01 21:43:16 +0000
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 129ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-01-01 21:43:19 +0000
+  Processing by UserSessionController#new as HTML
+Rendered user_session/new.html within layouts/application (7.2ms)
+Completed 200 OK in 82ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2011-01-01 21:43:31 +0000
+  Processing by UserSessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"83iPfndkvD90xhe4T/J9sA3fugjN/it4gHb2hI+Vel0=", "user_session"=>{"user"=>"batong@batong.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Rendered user_session/new.html within layouts/application (7.9ms)
+Completed 200 OK in 36ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2011-01-01 22:09:52 +0000
+  Processing by UserSessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"83iPfndkvD90xhe4T/J9sA3fugjN/it4gHb2hI+Vel0=", "user_session"=>{"user"=>"batong@batong.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Rendered user_session/new.html within layouts/application (8.0ms)
+Completed 200 OK in 136ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-01-01 22:09:54 +0000
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 90ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-01-01 22:10:11 +0000
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"83iPfndkvD90xhe4T/J9sA3fugjN/it4gHb2hI+Vel0=", "user"=>{"user"=>"cool", "mail"=>"bajs@bajs.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (37.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (170.9ms)[0m  SHOW TABLES
+  [1m[36mUser Load (117.1ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`mail` = BINARY 'bajs@bajs.com') LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`user`) = LOWER('cool')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '7a72f5f08e6ee2711d335af763787b8579b4b3ecf9d96c879ce649f7a84dca0959219361b62d48d2790fbe4aaf0b06b790e14ad2b636c3990dcd588ea88a4e48') LIMIT 1[0m
+  [1m[35mSQL (1.5ms)[0m  describe `users`
+  [1m[36mAREL (30.5ms)[0m  [1mINSERT INTO `users` (`user`, `mail`, `crypted_password`, `password_salt`, `persistence_token`, `created_at`, `updated_at`) VALUES ('cool', 'bajs@bajs.com', '6d8252024a15191a8b5d4729fa585041378546e78c486749dd9ed5dd88242af8da24518675bd2ab8d6eb084534278b73d5ed6330737776383c22a593a6d986c1', '1OK11L64w59DrUb1itVe', '7a72f5f08e6ee2711d335af763787b8579b4b3ecf9d96c879ce649f7a84dca0959219361b62d48d2790fbe4aaf0b06b790e14ad2b636c3990dcd588ea88a4e48', '2011-01-01 22:10:11', '2011-01-01 22:10:11')[0m
+  [1m[35mSQL (53.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/19
+Completed 302 Found in 749ms
+
+
+Started GET "/users/19" for 127.0.0.1 at 2011-01-01 22:10:11 +0000
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (17.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '7a72f5f08e6ee2711d335af763787b8579b4b3ecf9d96c879ce649f7a84dca0959219361b62d48d2790fbe4aaf0b06b790e14ad2b636c3990dcd588ea88a4e48') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '7a72f5f08e6ee2711d335af763787b8579b4b3ecf9d96c879ce649f7a84dca0959219361b62d48d2790fbe4aaf0b06b790e14ad2b636c3990dcd588ea88a4e48') LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 19) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 208ms (Views: 47.5ms | ActiveRecord: 429.5ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2011-01-01 22:10:14 +0000
+  Processing by UserSessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"83iPfndkvD90xhe4T/J9sA3fugjN/it4gHb2hI+Vel0="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '7a72f5f08e6ee2711d335af763787b8579b4b3ecf9d96c879ce649f7a84dca0959219361b62d48d2790fbe4aaf0b06b790e14ad2b636c3990dcd588ea88a4e48') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 19) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '7a72f5f08e6ee2711d335af763787b8579b4b3ecf9d96c879ce649f7a84dca0959219361b62d48d2790fbe4aaf0b06b790e14ad2b636c3990dcd588ea88a4e48') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 19) LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Completed 302 Found in 41ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-01-01 22:10:14 +0000
+  Processing by UserSessionController#new as HTML
+Rendered user_session/new.html within layouts/application (8.0ms)
+Completed 200 OK in 44ms (Views: 20.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-01-01 22:10:15 +0000
+  Processing by UserSessionController#new as HTML
+Rendered user_session/new.html within layouts/application (7.0ms)
+Completed 200 OK in 38ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2011-01-01 22:10:20 +0000
+  Processing by UserSessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"83iPfndkvD90xhe4T/J9sA3fugjN/it4gHb2hI+Vel0=", "user_session"=>{"user"=>"cool", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Rendered user_session/new.html within layouts/application (9.8ms)
+Completed 200 OK in 40ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2011-01-01 22:13:25 +0000
+  Processing by UserSessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"83iPfndkvD90xhe4T/J9sA3fugjN/it4gHb2hI+Vel0=", "user_session"=>{"user"=>"cool", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Rendered user_session/new.html within layouts/application (82.7ms)
+Completed   in 190ms
+
+ActionView::Template::Error (undefined method `password' for #<UserSession: no credentials provided>):
+    6:   </p>
+    7:   <p>
+    8:     <%= f.label :password %><br />
+    9:     <%= f.password_field :password %>
+    10:   </p>
+    11:   <p><%= f.submit "Login" %></p>
+    12: <% end %>
+  app/views/user_session/new.html:9:in `block in _app_views_user_session_new_html___2947998801372185520_2170683160__3849138616137290976'
+  app/views/user_session/new.html:1:in `_app_views_user_session_new_html___2947998801372185520_2170683160__3849138616137290976'
+  app/controllers/user_session_controller.rb:24:in `create'
+
+Rendered /Users/mattiaskarlsson2/.rvm/gems/ruby-1.9.2-p0@global/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /Users/mattiaskarlsson2/.rvm/gems/ruby-1.9.2-p0@global/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.5ms)
+Rendered /Users/mattiaskarlsson2/.rvm/gems/ruby-1.9.2-p0@global/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-01-01 22:13:41 +0000
+  Processing by UserSessionController#new as HTML
+Rendered user_session/new.html within layouts/application (3.4ms)
+Completed   in 30ms
+
+ActionView::Template::Error (undefined method `password' for #<UserSession: no credentials provided>):
+    6:   </p>
+    7:   <p>
+    8:     <%= f.label :password %><br />
+    9:     <%= f.password_field :password %>
+    10:   </p>
+    11:   <p><%= f.submit "Login" %></p>
+    12: <% end %>
+  app/views/user_session/new.html:9:in `block in _app_views_user_session_new_html___2947998801372185520_2155695300__3849138616137290976'
+  app/views/user_session/new.html:1:in `_app_views_user_session_new_html___2947998801372185520_2155695300__3849138616137290976'
+  app/controllers/user_session_controller.rb:10:in `new'
+
+Rendered /Users/mattiaskarlsson2/.rvm/gems/ruby-1.9.2-p0@global/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (41.7ms)
+Rendered /Users/mattiaskarlsson2/.rvm/gems/ruby-1.9.2-p0@global/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Users/mattiaskarlsson2/.rvm/gems/ruby-1.9.2-p0@global/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (49.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-01 22:13:45 +0000
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 64ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-01-01 22:13:47 +0000
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (68.6ms)
+Completed 200 OK in 102ms (Views: 83.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-01-01 22:13:48 +0000
+  Processing by UserSessionController#new as HTML
+Rendered user_session/new.html within layouts/application (3.5ms)
+Completed   in 34ms
+
+ActionView::Template::Error (undefined method `password' for #<UserSession: no credentials provided>):
+    6:   </p>
+    7:   <p>
+    8:     <%= f.label :password %><br />
+    9:     <%= f.password_field :password %>
+    10:   </p>
+    11:   <p><%= f.submit "Login" %></p>
+    12: <% end %>
+  app/views/user_session/new.html:9:in `block in _app_views_user_session_new_html___2947998801372185520_2170278320__3849138616137290976'
+  app/views/user_session/new.html:1:in `_app_views_user_session_new_html___2947998801372185520_2170278320__3849138616137290976'
+  app/controllers/user_session_controller.rb:10:in `new'
+
+Rendered /Users/mattiaskarlsson2/.rvm/gems/ruby-1.9.2-p0@global/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/mattiaskarlsson2/.rvm/gems/ruby-1.9.2-p0@global/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /Users/mattiaskarlsson2/.rvm/gems/ruby-1.9.2-p0@global/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-01-01 22:14:05 +0000
+  Processing by UserSessionController#new as HTML
+Completed   in 17ms
+
+SyntaxError (/Users/mattiaskarlsson2/.rvm/gems/ruby-1.9.2-p0@global/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:445: syntax error, unexpected tFID, expecting keyword_then or ';' or '\n'
+/Users/mattiaskarlsson2/.rvm/gems/ruby-1.9.2-p0@global/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:455: syntax error, unexpected keyword_end, expecting $end):
+  app/models/user.rb:6:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/application_controller.rb:10:in `current_user_session'
+  app/controllers/application_controller.rb:15:in `current_user'
+  app/controllers/application_controller.rb:28:in `require_no_user'
+
+Rendered /Users/mattiaskarlsson2/.rvm/gems/ruby-1.9.2-p0@global/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/mattiaskarlsson2/.rvm/gems/ruby-1.9.2-p0@global/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (46.8ms)
+Rendered /Users/mattiaskarlsson2/.rvm/gems/ruby-1.9.2-p0@global/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-01-01 22:22:03 +0000
+  Processing by UserSessionController#new as HTML
+Rendered user_session/new.html within layouts/application (7.6ms)
+Completed 200 OK in 134ms (Views: 68.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2011-01-01 22:22:12 +0000
+  Processing by UserSessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"83iPfndkvD90xhe4T/J9sA3fugjN/it4gHb2hI+Vel0=", "user_session"=>{"user"=>"batong@batong.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Rendered user_session/new.html within layouts/application (8.4ms)
+Completed 200 OK in 78ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-01-01 22:22:25 +0000
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 85ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-01-01 22:22:36 +0000
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"83iPfndkvD90xhe4T/J9sA3fugjN/it4gHb2hI+Vel0=", "user"=>{"user"=>"gsgs", "mail"=>"asfdadsf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '394926ac2bcae436660084db3001b7c774657ee0e6266c74b65c04119ef8b5fd17575d6720b976d81a44a5a630cd328be496a5f5bf2bc9dc1ceed2f8ea6ffe2c') LIMIT 1[0m
+  [1m[35mSQL (24.7ms)[0m  ROLLBACK
+Rendered users/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 201ms (Views: 46.3ms | ActiveRecord: 25.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-01-01 22:22:45 +0000
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"83iPfndkvD90xhe4T/J9sA3fugjN/it4gHb2hI+Vel0=", "user"=>{"user"=>"gsgs", "mail"=>"asfdadsf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '2c9896c9864fdebffbb4838ccb215d266b624b1cedaaa03ab7bc05f89d4adea052430fd21584ca33243494f4b1765b670e31a2191d90eca77ec4ef3ee97710f1') LIMIT 1
+  [1m[36mSQL (2.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (1.4ms)[0m  INSERT INTO `users` (`user`, `mail`, `crypted_password`, `password_salt`, `persistence_token`, `created_at`, `updated_at`) VALUES ('gsgs', 'asfdadsf', '8ea79cd770340124db8b6821375c2a26d7c8d6835fe9a952172551af545633b9b55014cee4698ef88138870d6dc336b4ef44b3d9e3d5207c94c6331660485633', 'vEBtbCr9ulbrtbOh-cDx', '2c9896c9864fdebffbb4838ccb215d266b624b1cedaaa03ab7bc05f89d4adea052430fd21584ca33243494f4b1765b670e31a2191d90eca77ec4ef3ee97710f1', '2011-01-01 22:22:45', '2011-01-01 22:22:45')
+  [1m[36mSQL (67.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/20
+Completed 302 Found in 107ms
+
+
+Started GET "/users/20" for 127.0.0.1 at 2011-01-01 22:22:45 +0000
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '2c9896c9864fdebffbb4838ccb215d266b624b1cedaaa03ab7bc05f89d4adea052430fd21584ca33243494f4b1765b670e31a2191d90eca77ec4ef3ee97710f1') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '2c9896c9864fdebffbb4838ccb215d266b624b1cedaaa03ab7bc05f89d4adea052430fd21584ca33243494f4b1765b670e31a2191d90eca77ec4ef3ee97710f1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 20) LIMIT 1
+Rendered users/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 107ms (Views: 25.9ms | ActiveRecord: 72.8ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2011-01-01 22:22:48 +0000
+  Processing by UserSessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"83iPfndkvD90xhe4T/J9sA3fugjN/it4gHb2hI+Vel0="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '2c9896c9864fdebffbb4838ccb215d266b624b1cedaaa03ab7bc05f89d4adea052430fd21584ca33243494f4b1765b670e31a2191d90eca77ec4ef3ee97710f1') LIMIT 1[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 20) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '2c9896c9864fdebffbb4838ccb215d266b624b1cedaaa03ab7bc05f89d4adea052430fd21584ca33243494f4b1765b670e31a2191d90eca77ec4ef3ee97710f1') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 20) LIMIT 1
+Redirected to http://localhost:3000/login
+Completed 302 Found in 41ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-01-01 22:22:48 +0000
+  Processing by UserSessionController#new as HTML
+Rendered user_session/new.html within layouts/application (6.9ms)
+Completed 200 OK in 72ms (Views: 12.7ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2011-01-01 22:22:54 +0000
+  Processing by UserSessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"83iPfndkvD90xhe4T/J9sA3fugjN/it4gHb2hI+Vel0=", "user_session"=>{"user"=>"gsgs", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Rendered user_session/new.html within layouts/application (7.9ms)
+Completed 200 OK in 35ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-01-01 22:27:40 +0000
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 172ms (Views: 81.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-01-01 22:27:59 +0000
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"83iPfndkvD90xhe4T/J9sA3fugjN/it4gHb2hI+Vel0=", "user"=>{"user"=>"batongen", "mail"=>"baisse1982@baisse1982", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (5.5ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (3.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'd52969e6bee8eb9afc720ac0910a7dbc7b3c6c7c666c279305c5c38cfd24d02fed1e2bf05adda2d8efb8586c61869f8c60c53c00d000fb27aaf917f4098fa1fd') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+Rendered users/new.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 84ms (Views: 26.1ms | ActiveRecord: 9.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-01-01 22:28:15 +0000
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"83iPfndkvD90xhe4T/J9sA3fugjN/it4gHb2hI+Vel0=", "user"=>{"user"=>"batongen", "mail"=>"bate@bate.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '837a8a0d9be338a89b531cd8ef97cb0138618913e03901222d2315bd286f9d9161c81a8d541c771fb026bb63630064c98853d5e5af29017922a771f6db7e2a63') LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  describe `users`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `users` (`user`, `mail`, `crypted_password`, `password_salt`, `persistence_token`, `created_at`, `updated_at`) VALUES ('batongen', 'bate@bate.com', '3511335f7afef055dcf0708076062d427bfcb4b1553915c37e07281cf71d9e1708994dd23890c413d5b8146e7bb483661e240b12e70065e67442ae0b6d7c3c9d', 'CXCWqu9ybYYn1gsX3rdY', '837a8a0d9be338a89b531cd8ef97cb0138618913e03901222d2315bd286f9d9161c81a8d541c771fb026bb63630064c98853d5e5af29017922a771f6db7e2a63', '2011-01-01 22:28:15', '2011-01-01 22:28:15')[0m
+  [1m[35mSQL (63.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/21
+Completed 302 Found in 106ms
+
+
+Started GET "/users/21" for 127.0.0.1 at 2011-01-01 22:28:15 +0000
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '837a8a0d9be338a89b531cd8ef97cb0138618913e03901222d2315bd286f9d9161c81a8d541c771fb026bb63630064c98853d5e5af29017922a771f6db7e2a63') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '837a8a0d9be338a89b531cd8ef97cb0138618913e03901222d2315bd286f9d9161c81a8d541c771fb026bb63630064c98853d5e5af29017922a771f6db7e2a63') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 21) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 56ms (Views: 19.2ms | ActiveRecord: 67.6ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2011-01-01 22:28:18 +0000
+  Processing by UserSessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"83iPfndkvD90xhe4T/J9sA3fugjN/it4gHb2hI+Vel0="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '837a8a0d9be338a89b531cd8ef97cb0138618913e03901222d2315bd286f9d9161c81a8d541c771fb026bb63630064c98853d5e5af29017922a771f6db7e2a63') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 21) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '837a8a0d9be338a89b531cd8ef97cb0138618913e03901222d2315bd286f9d9161c81a8d541c771fb026bb63630064c98853d5e5af29017922a771f6db7e2a63') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 21) LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Completed 302 Found in 37ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-01-01 22:28:18 +0000
+  Processing by UserSessionController#new as HTML
+Rendered user_session/new.html within layouts/application (7.1ms)
+Completed 200 OK in 55ms (Views: 34.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2011-01-01 22:28:27 +0000
+  Processing by UserSessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"83iPfndkvD90xhe4T/J9sA3fugjN/it4gHb2hI+Vel0=", "user_session"=>{"user"=>"bate@bate.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Rendered user_session/new.html within layouts/application (8.4ms)
+Completed 200 OK in 36ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-02 14:55:24 +0000
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (56.7ms)
+Completed 200 OK in 76ms (Views: 75.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-01-02 14:55:26 +0000
+  Processing by UserSessionController#new as HTML
+Rendered user_session/new.html within layouts/application (8.3ms)
+Completed 200 OK in 703ms (Views: 662.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-01-02 14:55:30 +0000
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 79ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-02 15:01:22 +0000
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-01-02 15:01:25 +0000
+  Processing by UserSessionController#new as HTML
+Rendered user_session/new.html within layouts/application (7.0ms)
+Completed 200 OK in 90ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-01-02 15:01:27 +0000
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 44ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-01-02 15:02:36 +0000
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 43ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-01-02 15:02:55 +0000
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uoe9gVSdhvcBqcOZ9nEeBCA8pByMvPDgOrfEJ37jV+8=", "user"=>{"user"=>"batong", "mail"=>"batongen@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (23.6ms)[0m  SHOW TABLES
+  [1m[36mUser Load (123.0ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '4efcce0df34f283a4cdbda3d436f1f63b0ea4b032106feda7855e661204cd86db2e92c1c2d1c6a19a5c412f11d27a6cdea2efd00c948e701daa3d6afe8301c94') LIMIT 1[0m
+  [1m[35mSQL (1.8ms)[0m  describe `users`
+  [1m[36mAREL (36.9ms)[0m  [1mINSERT INTO `users` (`user`, `mail`, `crypted_password`, `password_salt`, `persistence_token`, `created_at`, `updated_at`) VALUES ('batong', 'batongen@hotmail.com', 'f796bf0a59dc472e72483c1ca7ceffced7236f1e278ecaf115f02021202544c74929ea505d4070b6dd55459f1c78507a0d7118fde3bc49bc67f53a9e7a54b648', '8U-itegj9f-rX7KeZXCa', '4efcce0df34f283a4cdbda3d436f1f63b0ea4b032106feda7855e661204cd86db2e92c1c2d1c6a19a5c412f11d27a6cdea2efd00c948e701daa3d6afe8301c94', '2011-01-02 15:02:55', '2011-01-02 15:02:55')[0m
+  [1m[35mSQL (53.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/22
+Completed 302 Found in 534ms
+
+
+Started GET "/users/22" for 127.0.0.1 at 2011-01-02 15:02:56 +0000
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '4efcce0df34f283a4cdbda3d436f1f63b0ea4b032106feda7855e661204cd86db2e92c1c2d1c6a19a5c412f11d27a6cdea2efd00c948e701daa3d6afe8301c94') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '4efcce0df34f283a4cdbda3d436f1f63b0ea4b032106feda7855e661204cd86db2e92c1c2d1c6a19a5c412f11d27a6cdea2efd00c948e701daa3d6afe8301c94') LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 22) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 152ms (Views: 19.0ms | ActiveRecord: 239.5ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2011-01-02 15:02:58 +0000
+  Processing by UserSessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Uoe9gVSdhvcBqcOZ9nEeBCA8pByMvPDgOrfEJ37jV+8="}
+  [1m[35mUser Load (1.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '4efcce0df34f283a4cdbda3d436f1f63b0ea4b032106feda7855e661204cd86db2e92c1c2d1c6a19a5c412f11d27a6cdea2efd00c948e701daa3d6afe8301c94') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 22) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '4efcce0df34f283a4cdbda3d436f1f63b0ea4b032106feda7855e661204cd86db2e92c1c2d1c6a19a5c412f11d27a6cdea2efd00c948e701daa3d6afe8301c94') LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 22) LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Completed 302 Found in 37ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-01-02 15:02:58 +0000
+  Processing by UserSessionController#new as HTML
+Rendered user_session/new.html within layouts/application (6.6ms)
+Completed 200 OK in 70ms (Views: 11.1ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2011-01-02 15:03:06 +0000
+  Processing by UserSessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uoe9gVSdhvcBqcOZ9nEeBCA8pByMvPDgOrfEJ37jV+8=", "user_session"=>{"user"=>"batong", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Rendered user_session/new.html within layouts/application (7.8ms)
+Completed 200 OK in 39ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-02 15:38:19 +0000
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1871.6ms)
+Completed 200 OK in 2017ms (Views: 2015.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-01-02 15:38:28 +0000
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (68.1ms)
+Completed 200 OK in 115ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-01-02 15:56:33 +0000
+  Processing by UserSessionController#new as HTML
+Rendered user_session/new.html within layouts/application (7.1ms)
+Completed 200 OK in 38ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-01-02 15:56:35 +0000
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 82ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-02 16:06:25 +0000
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (45.5ms)[0m  [1mSELECT `posts`.* FROM `posts`[0m
+Rendered posts/index.html.erb within layouts/application (48.1ms)
+Completed 200 OK in 441ms (Views: 78.1ms | ActiveRecord: 45.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-01-02 16:06:27 +0000
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (147.4ms)
+Rendered posts/new.html.erb within layouts/application (195.2ms)
+Completed 200 OK in 230ms (Views: 213.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-02 16:06:29 +0000
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 32ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (113.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (22.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (3.2ms)[0m  [1mdescribe `comments`[0m
+  [1m[35mSQL (13.2ms)[0m  SHOW KEYS FROM `comments`
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `posts`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `posts`
+  [1m[36mSQL (2.1ms)[0m  [1mdescribe `tags`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `tags`
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (272.7ms)[0m  [1mDROP DATABASE IF EXISTS `btong_website_test`[0m
+  [1m[35mSQL (6.5ms)[0m  CREATE DATABASE `btong_website_test` DEFAULT CHARACTER SET `utf8`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (197.5ms)[0m  CREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `commenter` varchar(255), `body` text, `post_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (250.8ms)[0m  CREATE TABLE `posts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `title` varchar(255), `content` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (146.4ms)[0m  CREATE TABLE `tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `post_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (88.8ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user` varchar(255), `mail` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (110.3ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (167.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101217102309')[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20100530190557')
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20100609084327')[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20100613180254')
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20101217100518')[0m
+
+
+Started GET "/login" for 127.0.0.1 at 2011-01-02 16:17:52 +0000
+  Processing by UserSessionController#new as HTML
+Rendered user_session/new.html within layouts/application (7.1ms)
+Completed 200 OK in 102ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-01-02 16:17:59 +0000
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 74ms (Views: 58.2ms | ActiveRecord: 0.0ms)

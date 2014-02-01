@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+ <head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+  <title><%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'application' %>
+  </head>
+ <body>
+ <% if request.env['HTTP_USER_AGENT'].downcase.match('msie') %>
+<%= javascript_include_tag "shadedborder" %> 
+<% end %>
+  <div class="wrapper">
+  	 <div class="logo">   
+	 <script language="javascript" type="text/javascript"> 
+    var myBorder = RUZEE.ShadedBorder.create({ corner:8, shadow:16 });
+    myBorder.render('wrapper');</script>
+	 </div>
+     <div class="menu">  
+   	 <ul id = "css-menu">
+         <li id ="css-menu"><%= link_to "Home", { :controller => 'home'}, :id => "#{current_page?(:controller => 'home') ? "css-menu-active" : "css-menu-link"}" %></li>
+	     <li id ="css-menu"><%= link_to "Posts", { :controller => 'posts'}, :id => "#{current_page?(:controller => 'posts') ? "css-menu-active" : "css-menu-link"}" %></li>
+ 	     <li id ="css-menu"><%= link_to "New posts", { :controller => 'posts', :action => 'new' }, :id => "#{current_page?(:controller => 'posts', :action => 'new') ? "css-menu-active" : "css-menu-link"}" %></li>
+     </ul>
+     </div>
+     <div class="content"><%= notice %>
+     <%= yield %>
+	 </div>
+    </div>
+ </body>
+</html>

@@ -1,0 +1,22 @@
+<%= form_for @user do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.label :mail, "Email Address" %><br />
+    <%= f.text_field :mail %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, "Confirm Password" %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p><%= f.submit "Sign up" %></p>
+<% end %>
+
+<%= link_to 'Back', root_path(@post) %>
