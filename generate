@@ -1,59 +1,0 @@
-Script started on Sat Dec 11 13:49:12 2010
-bash-3.2$ rails generate
-Usage: rails generate GENERATOR [args] [options]
-
-General options:
-  -h, [--help]     # Print generator's options and usage
-  -p, [--pretend]  # Run but do not make any changes
-  -f, [--force]    # Overwrite files that already exist
-  -s, [--skip]     # Skip files that already exist
-  -q, [--quiet]    # Suppress status output
-
-Please choose a generator below.
-
-Rails:
-  controller
-  generator
-  helper
-  integration_test
-  mailer
-  migration
-  model
-  observer
-  performance_test
-  plugin
-  resource
-  scaffold
-  scaffold_controller
-  session_migration
-  stylesheets
-
-Pickle:
-  pickle
-
-Rspec:
-  rspec:install
-
-TestUnit:
-  test_unit:controller
-  test_unit:helper
-  test_unit:integration
-  test_unit:mailer
-  test_unit:model
-  test_unit:observer
-  test_unit:performance
-  test_unit:plugin
-  test_unit:scaffold
-
-bash-3.2$ rails generate[2Pserver[C[C[C[C[C[C[C[C[C[Cbundle install[C[C[C[C[C[C[C[C[C[C[4hsudo [4l[C[C[C[C[C[C[C[C[C[C[C[C[C[Cer[C[C[C[C[C[C[C[C[C[C[7Pbundle install[C[C[C[C[C[C[C[C[C[Cgem uninstall mysql2[C[C[C[C[C[C[C[C[C[C[6Pbundle install[C[C[C[C[C[C[C[C[C[Cgem uninstall mysql[C[C[C[C[C[C[C[C[C[C[7Prails server[C[C[C[C[C[C[C[C[C[Csudo gem install mysql -- —- with-mysql-config=/usr/local/mysql/bin/mysql_config[C[C[C[C[C[C[C[C[C[Cgem uninstall mysql[K[C[C[C[C[C[C[C[C[C[Csudo gem install mysql —-with-mysql-config=/usr/local/mysql/bin/mysql_config[C[C[C[C[C[C[C[C[C[Cgem uninstall mysql[K[C[C[C[C[C[C[C[C[C[C[7Prails server[C[C[C[C[C[C[C[C[C[Csudo gem install mysql — –with-mysql-config=/usr/local/mysql/bin/mysql_config[C[C[C[C[C[C[C[C[C[Crails server[K[C[C[C[C[C[C[C[C[C[Csudo chmod go-w /usr/local/git/[C[C[C[C[C[C[C[C[C[C[19Prails server[C[C[C[C[C[C[C[C[C[Csudo chmod go-w /usr/local/git/bin[C[C[C[C[C[C[C[C[C[C[22Prails server[C[C[C[C[C[C[C[C[C[Csudo chmod go-w /usr/local/[C[C[C[C[C[C[C[C[C[C[15Prails server[C[C[C[C[C[C[C[C[C[Csudo chmod go-w /usr/local/mysql[C[C[C[C[C[C[C[C[C[C[20Prails server[C[C[C[C[C[C[C[C[C[Csudo chmod go-w /usr/local/mysql/bin[C[C[C[C[C[C[C[C[C[C[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho $PATH[Krails server[C[C[C[C[C[C[C[C[C[Cbundle install[C[C[C[C[C[C[C[C[C[Csudo chmod o-w /usr/local/bin[C[C[C[C[C[C[C[C[C[C[10Pgem uninstall mysql[C[C[C[C[C[C[C[C[C[Cuninstall gem[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Prails server[C[C[C[C[C[C[C[C[C[Cchmod o-w /usr/X11R6/bin[6Pbinsbinetc # My company's default $PATH includes /etc on OSes where /sbin doesn't exist, such as SunOS.[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Krake rspec
-(in /Users/mattiaskarlsson2/Documents/Aptana RadRails Workspace/btong_website)
-rake aborted!
-Don't know how to build task 'rspec'
-
-(See full trace by running task with --trace)
-bash-3.2$ rake spec
-(in /Users/mattiaskarlsson2/Documents/Aptana RadRails Workspace/btong_website)
-bash-3.2$ exit
-exit
-
-Script done on Sat Dec 11 15:11:23 2010
